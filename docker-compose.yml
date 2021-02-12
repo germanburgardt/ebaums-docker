@@ -1,0 +1,12 @@
+php:
+   build: .
+   working_dir: /var/www/ebaumsworld/html/
+   volumes:
+     - ./:/var/www/html
+     - ./php.ini:/usr/local/etc/php/php.ini
+   extra_hosts:
+     - "lara.local:127.0.0.1"
+   hostname: lara.local
+   domainname: local 
+   ports:
+     - 80:80  
