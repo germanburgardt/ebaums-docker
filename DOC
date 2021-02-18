@@ -1,0 +1,16 @@
+//CAPTURAMOS EL LOG DE APACHE EN LOS CONTENEDORES
+docker logs -f [containerName] >/dev/null   
+
+//ENTRAT AL CONTENEDOR
+
+docker exec -it <mycontainer> bash
+
+
+//////correr mencache en el contenedor /////
+
+/etc/init.d/memcached start
+
+
+
+//para mostrar nuestra ip local
+"$(ifconfig | grep "inet " | grep -Fv 127.0.0.1 | awk '{print $2}')"
