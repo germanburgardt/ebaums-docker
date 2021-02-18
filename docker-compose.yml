@@ -1,11 +1,15 @@
 php:
    build: .
-   working_dir: /var/www/ebaumsworld/html/
+   working_dir: /home/
    volumes:
-     - ./:/var/www/html
+ 
      - ./php.ini:/usr/local/etc/php/php.ini
+   environment:
+    - DOCKERHOST=192.168.0.49
+
    extra_hosts:
-     - "lara.local:127.0.0.1"
+     - "lara.local:192.168.0.49"
+     - dockerhost:192.168.0.49
    hostname: lara.local
    domainname: local 
    ports:
