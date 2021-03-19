@@ -12,5 +12,6 @@ docker exec -it <mycontainer> bash
 
 
 
+
 //para mostrar nuestra ip local
 "$(ifconfig | grep "inet " | grep -Fv 127.0.0.1 | awk '{print $2}')"
